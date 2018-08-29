@@ -1,4 +1,4 @@
-var getGuangdongCity=function(){
+var getGuangdongCity=function(){//这个函数就一个作用,定义对象数组后返回该数组
    var  guangdongCity=[
        {
          name:'shenzhen',
@@ -36,6 +36,7 @@ var addressAdapter=function(oldAddressfn){
      //address[c.name]:将返回数组中的每个元素的name作为address对象的属性
        address[c.name]=c.id;
    }
+   //需要注意的是这里返回的是一个匿名函数而不是对象address,需要调用它才会返回address
    return function(){
       return address;
    }
